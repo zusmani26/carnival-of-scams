@@ -1,1 +1,151 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+h1 {
+  font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
+  font-size: 250%;
+  font-weight: bold;
+  text-align: center;
+  
+   /* Rainbow gradient text effect */
+   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #00ff00, #00aaff, #6600ff, #ff00ff);
+   background-size: 400% 400%; /* Larger gradient for smoother transitions */
+   -webkit-background-clip: text; /* Clip the background to the text */
+   color: transparent; /* Make text transparent to show the background gradient */
+ 
+   animation: rainbowAndLightBulb 5s linear infinite; /* Apply smooth rainbow animation to text */
+   
+   padding: 20px 40px;
+   border-radius: 15px;
+   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Optional: glow effect */
+  
+  /* Lightbulb border effect with dim yellow glow */
+  position: relative;
+  border: 5px solid transparent; /* Invisible border to make space for box-shadow */
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.3), /* Dim yellow glow */
+              0 0 25px rgba(255, 255, 0, 0.2),
+              0 0 35px rgba(255, 255, 0, 0.1), 
+              0 0 50px rgba(255, 255, 0, 0.1); /* Dim yellowish border flicker */
+}
+.welcome-message {
+  font-size: 1.8rem; /* Adjust size for the welcome message */
+  font-weight: normal; /* Make it lighter */
+  color: #8e0f70; /* Default text color */
+  text-align: center; /* Center the text */
+  margin-bottom: 20px; /* Space below the message */
+
+  /* Glowing purple text effect */
+  text-shadow: 0 0 5px rgba(128, 0, 128, 0.7), 
+               0 0 10px rgba(128, 0, 128, 0.5), 
+               0 0 15px rgba(128, 0, 128, 0.3),
+               0 0 20px rgba(128, 0, 128, 0.2); /* Purple glow effect */
+}
+
+.navigation-container {
+display: inline-block;
+text-align: center; /* Center the text and image */
+position: relative;
+}
+
+/* Style for the text box around the "Roulette" text */
+.navigation-text {
+display: inline-block;
+margin-top: 10px;
+padding: 10px 20px;
+background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #00ff00, #00aaff, #6600ff, #ff00ff);
+background-size: 400% 400%; /* Larger gradient for smoother transitions */
+-webkit-background-clip: text; /* Clip the background to the text */
+color: transparent; /*  Yellow text */
+font-size: 1.2rem;
+font-weight: bold;
+text-transform: uppercase;
+border-radius: 10px;
+position: absolute;
+bottom: -30px; /* Position below the image */
+left: 50%;
+transform: translateX(-50%); /* Center the text */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for the text box */
+
+/* Apply the rainbow and lightbulb animation */
+animation: rainbowAndLightBulb 5s linear infinite;
+}
+
+
+@keyframes rainbowAndLightBulb {
+    0% {
+      background-position: 0% 50%; /* Gradient starts at the far left */
+      box-shadow: 0 0 15px rgba(255, 255, 0, 0.3), 
+      0 0 25px rgba(255, 255, 0, 0.2),
+      0 0 35px rgba(255, 255, 0, 0.1), 
+      0 0 50px rgba(255, 255, 0, 0.1);
+    }
+    25% {
+      background-position: 50% 50%; /* Gradient moves to the middle */
+      box-shadow: 0 0 10px rgba(255, 255, 0, 0.4), 
+      0 0 15px rgba(255, 255, 0, 0.3),
+      0 0 25px rgba(255, 255, 0, 0.2), 
+      0 0 40px rgba(255, 255, 0, 0.2);
+    }
+    50% {
+      background-position: 100% 50%; /* Gradient moves to the far right */
+      box-shadow: 0 0 5px rgba(255, 255, 0, 0.2), 
+      0 0 10px rgba(255, 255, 0, 0.1),
+      0 0 15px rgba(255, 255, 0, 0.1), 
+      0 0 25px rgba(255, 255, 0, 0.1);
+    }
+    75% {
+      background-position: 50% 50%; /* Gradient moves back to the middle */
+      box-shadow: 0 0 10px rgba(255, 255, 0, 0.4), 
+      0 0 15px rgba(255, 255, 0, 0.3),
+      0 0 25px rgba(255, 255, 0, 0.2), 
+      0 0 40px rgba(255, 255, 0, 0.3);
+
+    }
+    100% {
+      background-position: 0% 50%; /* Gradient returns to the far left */
+      box-shadow: 0 0 15px rgba(255, 255, 0, 0.3), 
+      0 0 25px rgba(255, 255, 0, 0.2),
+      0 0 35px rgba(255, 255, 0, 0.1), 
+      0 0 50px rgba(255, 255, 0, 0.1);
+    }
+}
+
+  h2, h3 {
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+  }
+  body {
+    margin: 2em;
+    background-color: black; 
+    color: #fff; 
+  }
+  body, input[type="text"], button {
+    color: #333;
+    font-family: Cambria, Georgia, serif;
+  }
+  button {
+    background-color: #eee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  button:hover {
+    background-color: black;
+    color: white;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: auto;
+  }
+  /* everywhere else */
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
