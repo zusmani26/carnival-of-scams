@@ -10,4 +10,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Carnvial of Scams';
+  counter = 0;
+
+  ngOnInit(): void {
+    this.counter = 1;
+  }
 }
